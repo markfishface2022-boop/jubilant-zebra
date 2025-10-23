@@ -1,13 +1,11 @@
-# This file specifies project metadata and dependencies.
-
+# This is the fix. Just list "pandas".
 [project]
 name = "app"
 version = "0.1.0"
 description = "A simple Streamlit app to view local Excel files."
 
-# List all the libraries your script depends on.
 dependencies = [
     "streamlit",
-    "pandas",
-    "openpyxl"  # Required by pandas to read .xlsx files
+    "pandas",     # <-- This will get a modern, compatible version
+    "openpyxl"
 ]
